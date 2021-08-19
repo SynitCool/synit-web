@@ -4,6 +4,7 @@ import json
 
 app = Flask(__name__)
 
+# Make route website
 @app.route('/')
 def base():
     return render_template("index.html")
