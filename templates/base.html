@@ -39,6 +39,15 @@
           </nav>
         {% block content %}
         {% endblock%}
+        <div class="p-5">
+          <div class="container">
+              <h1 class="display-5 text-center">Found me</h1>
+              <hr class="my-2">
+              <div class="row">
+                <p class="cols-sm text-center"><a href="https://github.com/SynitCool" target="_blank"><img src="{{url_for('static', filename='assets/github-logo.png')}}" width=100 height=100/></a></p>
+              </div>
+          </div>
+        </div>
         <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
       </body>
 </html>
