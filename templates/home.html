@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="p-5" style="background-color: rgb(180, 0, 0);">
+    <div class="container">
+        <h1 class="display-5 text-center" style="color: aliceblue;">Synit Web</h1>
+        <p class="lead text-center" style="color: aliceblue;">
+            The API that i made is use for specific dataset, you can also get the model or architecture that
+            i use for training the dataset or you can use the pretrained model that already train for 
+            specific dataset.    
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <p class="display-5 text-center" style="color: aliceblue">Machine Learning</p>
+            <hr class="my-2" />
+            <p class="lead text-center" style="color: aliceblue;">
+                Machine Learning API is about the API that using machine learning to solve easy task
+                that can be solve fast than using deep learning, in this API there's no model deep neural
+                network just basic machine learning model
+            </p>
+        </div>
+        <div class="col-sm">
+            <p class="display-5 text-center" style="color: aliceblue;">Deep Learning</p>
+            <hr class="my-2" />
+            <p class="lead text-center" style="color: aliceblue">
+                Deep Learning API is about the API that using deep learning to solve complex task or problem
+                or to solve complex problem like complex images that can't be solve by basic machine learning
+                model and using tensorflow for the package
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
