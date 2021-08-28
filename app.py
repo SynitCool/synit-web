@@ -21,5 +21,13 @@ def home():
 def about():
     return render_template("about.html")
 
+@app.route('/api/machine-learning')
+def ml_page():
+    return render_template("mlPage.html")
+
+@app.route('/api/deep-learning')
+def dl_page():
+    return render_template("dlPage.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
