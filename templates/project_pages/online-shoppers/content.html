@@ -1,0 +1,34 @@
+{% extends "project_base.html" %}
+{% block project_content %}
+<div class="p-5">
+    <h1>The Content</h1>
+    <hr class="my-2"/>
+    <p class="lead">These are the content on the project</p>
+    <br/>
+    <h2>Exploratory Data Analysis</h2>
+    <hr class="my-2"/>
+    <p class="lead">
+        Exploratory Data Analysis or well known as EDA in this project is about analysis the dataset to 
+        show description of the dataset and gives some information of the dataset before doing modelling, 
+        show characteristic of each label in the dataset for easy to understand of the dataset before 
+        doing modelling and gives information before doing feature engineering in this dataset.
+    </p>
+    <br/>
+    <h2>Feature Engineering</h2>
+    <hr class="my-2"/>
+    <p class="lead">
+        Feature Engineering in this dataset to make the dataset cleaned and make dataset good for modelling, 
+        in feature engineering in this dataset i removed the feature to prevent overfit in this dataset so 
+        the model easily classify the label, i transformed the feature to one hot encoding before doing 
+        modelling with this dataset, and prevent dummy trap in this dataset.
+    </p>
+    <br/>
+    <h2>Modelling</h2>
+    <hr class="my-2"/>
+    <p class="lead">
+        Modelling in this dataset to classify the label for production, in the modelling i used k-fold 
+        and train test split in this dataset to compare of each model and finding best model for this dataset,
+        for classify the label in this dataset i selected usefull features in this dataset and make classify.
+    </p>
+</div>
+{% endblock %}
