@@ -21,13 +21,14 @@ def home():
 def about():
     return render_template("about_pages/about.html")
 
+# Route about related to api 
 @app.route('/api/machine-learning')
 def ml_page():
-    return render_template("api_pages/mlPage.html")
+    return render_template("api_pages/mlPage_base.html")
 
 @app.route('/api/deep-learning')
 def dl_page():
-    return render_template("api_pages/dlPage.html")
+    return render_template("api_pages/dlPage_base.html")
 
 # Route about related to netflix pages
 
