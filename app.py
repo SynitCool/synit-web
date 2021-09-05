@@ -43,5 +43,20 @@ def netflix_content():
 def netflix_credit():
     return render_template("project_pages/netflix/credit.html")
 
+
+# Royer about related to covid-19 indonesia pages
+
+@app.route('/project/cvd19-ind/overview')
+def cvd19Ind_overview():
+    return render_template("project_pages/covid19-ind/overview.html")
+
+@app.route('/project/cvd19-ind/content')
+def cvd19Ind_content():
+    return render_template("project_pages/covid19-ind/content.html")
+
+@app.route('/project/cvd19-ind/credit')
+def cvd19Ind_credit():
+    return render_template("project_pages/covid19-ind/credit.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
