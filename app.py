@@ -44,7 +44,7 @@ def netflix_credit():
     return render_template("project_pages/netflix/credit.html")
 
 
-# Royer about related to covid-19 indonesia pages
+# Router about related to covid-19 indonesia pages
 
 @app.route('/project/cvd19-ind/overview')
 def cvd19Ind_overview():
@@ -57,6 +57,20 @@ def cvd19Ind_content():
 @app.route('/project/cvd19-ind/credit')
 def cvd19Ind_credit():
     return render_template("project_pages/covid19-ind/credit.html")
+
+# Router about related to online shoppers pages
+
+@app.route('/project/online-shoppers/overview')
+def onlineShoppers_overview():
+    return render_template("project_pages/online-shoppers/overview.html")
+
+@app.route('/project/online-shoppers/content')
+def onlineShoppers_content():
+    return render_template("project_pages/online-shoppers/content.html")
+
+@app.route('/project/online-shoppers/credit')
+def onlineShoppers_credit():
+    return render_template("project_pages/online-shoppers/credit.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
