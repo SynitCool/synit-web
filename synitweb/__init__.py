@@ -7,9 +7,11 @@ def create_app():
     from .views import views
     from .projects import projects
     from .api import api
+    from .collections import collections
 
     app.register_blueprint(views)
     app.register_blueprint(projects)
     app.register_blueprint(api)
+    app.register_blueprint(collections)
 
     return app
