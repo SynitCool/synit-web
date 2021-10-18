@@ -8,12 +8,16 @@ def base():
 
 @views.route('/project')
 def project():
-    return render_template("project_pages/overview_project.html")
+    return render_template("synit_web/project_pages/overview_project.html")
 
 @views.route('/home')
 def home():
-    return render_template("home_pages/home.html")
+    return render_template("synit_web/home_pages/home.html")
+
+@views.route('/collections')
+def collections():
+    return render_template("synit_web/collections_pages/collections_pages.html")
 
 @views.route('/about')
 def about():
-    return render_template("about_pages/about.html")
+    return render_template("synit_web/about_pages/about.html")
