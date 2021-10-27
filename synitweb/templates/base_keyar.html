@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet"/>
+        <link href="{{url_for('static', filename='css/sidebars.css')}}" rel="stylesheet"/>
+        <title>Keyar Mining</title>
+    </head>
+    <body>
+        {% block content %}
+        {% endblock%}
+      <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+    </body>
+</html>
