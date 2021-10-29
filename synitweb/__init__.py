@@ -6,15 +6,11 @@ def create_app():
 
     from .views import views
     from .projects import projects
-    from .ml_api import ml_api
-    from .dl_api import dl_api
 
     from .keyar_mining_views import keyar_mining
 
     app.register_blueprint(views)
     app.register_blueprint(projects)
-    app.register_blueprint(ml_api)
-    app.register_blueprint(dl_api)
 
     app.register_blueprint(keyar_mining)
 
