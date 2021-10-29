@@ -21,3 +21,7 @@ def collections():
 @views.route('/about')
 def about():
     return render_template("synit_web/about_pages/about.html")
+
+@views.route("/api/dl_api")
+def dl_api():
+    return "<p class='text-center'>not available yet</p>"
