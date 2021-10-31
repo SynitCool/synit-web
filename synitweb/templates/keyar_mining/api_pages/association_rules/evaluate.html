@@ -1,0 +1,117 @@
+{% extends "base_keyar_api.html" %}
+{% block title %}Synit Web - Keyar Mining{% endblock %}
+{% block keyar_api_content %}
+<div class="p-5">
+    <!-- Overview Evaluate -->
+    <overview>
+        <h1 class="h1">Evaluate</h1>
+        <p class="lead">
+            Association rule learning is a rule-based machine learning method for discovering 
+            interesting relations between variables in large databases. It is intended to identify strong 
+            rules discovered in databases using some measures of interestingness. This function is to evaluate 
+            the algoritms that got supports
+        </p>
+        <p>source : wikipedia</p>
+    </overview>
+    <br/>
+    <!-- Methods, Attributes, and Parameter -->
+    <info>
+        <div class="row">
+            <div class="col-sm">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Methods</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">evaluate</th>
+                            <td scope="row">
+                                returning metrices or combinations and supports.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Attributes</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">None</th>
+                            <td scope="row">None</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Parameters</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">combinations_supports</th>
+                            <td scope="row">
+                                type : numpy.darray or pandas.DataFrame <br/>
+                                desc : the combinations supports to be evaluate.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">min_threshold</th>
+                            <td scope="row">
+                                type : float <br/>
+                                optional : any number greater than 0 <br/>
+                                desc : selection the metrics or evaluate from combinations. The default is 0.5.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">return_df</th>
+                            <td scope="row">
+                                type : bool <br/> 
+                                optional : False or True <br/>
+                                desc : return as pandas dataframe. The default is False
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </info>
+    <br/>
+    <!-- How To -->
+    <howto>
+        <h2 class="h2">How To</h2>
+        <p class="lead">For trying to use the code you can follow the full code in the below</p>
+        <code>
+            <pre>
+                from krmining.association_rules._fpgrowth import fpgrowth
+                from krmining.association_rules._evaluate import evaluate
+                from krmining.association_rules._apriori import apriori
+
+                from krmining.datasets import make_fruit_sold_dummy_association_rules
+                
+
+                df = make_fruit_sold_dummy_association_rules()
+                max_length = 2
+                
+                combinations_supports = apriori(df, max_length=max_length)
+                apriori_evaluate = evaluate(combinations_supports, return_df=True)
+
+                combinations_supports = fpgrowth(df, max_length=max_length)
+                fpgrowth_evaluate = evaluate(combinations_supports, return_df=True)
+            </pre>
+        </code>
+    </howto>
+</div>
+{% endblock %}
