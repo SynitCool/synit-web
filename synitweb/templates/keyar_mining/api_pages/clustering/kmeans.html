@@ -1,0 +1,146 @@
+{% extends "base_keyar_api.html" %}
+{% block title %}Synit Web - Keyar Mining{% endblock %}
+{% block keyar_api_content %}
+<div class="p-5">
+    <!-- Overview K-Means -->
+    <overview>
+        <h1 class="h1">K-Means Algorithm</h1>
+        <p class="lead">
+            k-means clustering is a method of vector quantization, originally from signal processing, 
+            that aims to partition n observations into k clusters in which each observation belongs to 
+            the cluster with the nearest mean (cluster centers or cluster centroid), serving as a prototype 
+            of the cluster. This results in a partitioning of the data space into Voronoi cells. k-means 
+            clustering minimizes within-cluster variances (squared Euclidean distances), but not regular 
+            Euclidean distances, which would be the more difficult Weber problem: the mean optimizes squared 
+            errors, whereas only the geometric median minimizes Euclidean distances.
+        </p>
+        <p>source : wikipedia</p>
+    </overview>
+    <br/>
+    <!-- Methods, Attributes, and Parameter -->
+    <info>
+        <div class="row">
+            <div class="col-sm">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Methods</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">fit(data)</th>
+                            <td scope="row">
+                                training or fitting the model
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">predict(data)</th>
+                            <td scope="row">
+                                predict where the data belongs
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">evaluate(data)</th>
+                            <td scope="row">
+                                result evaluating model
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Attributes</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">k</th>
+                            <td scope="row">how much k is used</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">n_iters</th>
+                            <td scope="row">how much iteration is used</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">init</th>
+                            <td scope="row">what initialize method is use</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">centroid</th>
+                            <td scope="row">where is the centroid</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Parameters</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">k</th>
+                            <td scope="row">
+                                type : int <br/>
+                                desc : number of cluters
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">n_iters</th>
+                            <td scope="row">
+                                type : int <br/>
+                                optional : int number greater than 0 <br/>
+                                desc : the iteration of k-means algorithm. The default is 10.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">init</th>
+                            <td scope="row">
+                                type : string <br/> 
+                                optional : {"random", "kmeans++"} <br/>
+                                desc : the algorithm to determine first centroids. The default is "kmeans++".
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">data</th>
+                            <td scope="row">
+                                type : numpy.ndarray or shape(n_samples, n_features) <br/> 
+                                desc : what data to be used
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </info>
+    <br/>
+    <!-- How To -->
+    <howto>
+        <h2 class="h2">How To</h2>
+        <p class="lead">For trying to use the code you can follow the full code in the below</p>
+        <code>
+            <pre>
+                from krmining.clustering import KMeans
+                from krmining.datasets import get_example_covid_id
+
+                df = get_example_covid_id()
+
+                k = 2
+
+                kmeans = KMeans(k)
+                kmeans.fit(df)
+                centroid = kmeans.centroid
+            </pre>
+        </code>
+    </howto>
+</div>
+{% endblock %}
