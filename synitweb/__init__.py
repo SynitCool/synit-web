@@ -7,13 +7,7 @@ def create_app():
     from .views import views
     from .projects import projects
 
-    from .keyar_mining_views import keyar_mining
-    from .keyar_mining_api import keyar_mining_api
-
     app.register_blueprint(views)
     app.register_blueprint(projects)
-
-    app.register_blueprint(keyar_mining)
-    app.register_blueprint(keyar_mining_api)
 
     return app
