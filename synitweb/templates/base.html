@@ -8,6 +8,7 @@
         <title>Synit Web</title>
     </head>
     <body>
+      <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="/">Synit Web</a>
@@ -38,20 +39,22 @@
                     <a class="nav-link active" href="/collections" tabindex="-1">Collections</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="/keyar-mining" tabindex="-1">Keyar-mining</a>
+                    <a class="nav-link active" href="https://synitcool.github.io/keyar-mining" tabindex="-1" target="_blank">Keyar-mining</a>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
-        {% block content %}
-        {% endblock%}
+      </header>
+      {% block content %}
+      {% endblock%}
+      <footer>
         <div class="p-5 bg-dark" style="position: relative; bottom: 0px;">
             <div class="row">
               <div class="col">
                 <div class="container">
                   <h4 style="color: aliceblue">Find Me</h4>
-                  <span>
+                  <span style="position: relative;">
                     <a href="https://www.github.com/SynitCool" target="_blank">
                       <img src="{{url_for('static', filename='assets/github-logo.png')}}" width=35 height=35/>
                     </a>
@@ -75,10 +78,11 @@
             <div class="bg-dark text-center" style="position: relative; width: 200px; height: 100px; padding-top: 5%;">    
               <div style="position: relative; bottom: 5px; color:beige;">
                 v1.1.0 </br>
-                oct, 2021 - nov, 2021
+                sep, 2021 - nov, 2021
               </div>
           </div>
         </div>
+      </footer>
       <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
     </body>
 </html>
