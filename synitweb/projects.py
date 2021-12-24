@@ -45,3 +45,30 @@ def onlineShoppers_content():
 def onlineShoppers_credit():
     return render_template("synit_web/project_pages/online-shoppers/credit.html")
 
+# Route about related to mushrooms pages
+
+@projects.route('/project/mushrooms/overview')
+def mushrooms_overview():
+    return render_template("synit_web/project_pages/mushrooms/overview.html")
+
+@projects.route('/project/mushrooms/content')
+def mushrooms_content():
+    return render_template("synit_web/project_pages/mushrooms/content.html")
+
+@projects.route('/project/mushrooms/credit')
+def mushrooms_credit():
+    return render_template("synit_web/project_pages/mushrooms/credit.html")
+
+# Route about related to keyar-mining pages
+
+@projects.route('/project/keyar-mining/overview')
+def krmining_overview():
+    return render_template("synit_web/project_pages/keyar-mining/overview.html")
+
+@projects.route('/project/keyar-mining/content')
+def krmining_content():
+    return render_template("synit_web/project_pages/keyar-mining/content.html")
+
+@projects.route('/project/keyar-mining/credit')
+def krmining_credit():
+    return render_template("synit_web/project_pages/keyar-mining/credit.html")
